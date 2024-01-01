@@ -1,4 +1,11 @@
 /* imaage styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .box{
     width: 500px; 
     height: 500px; 
