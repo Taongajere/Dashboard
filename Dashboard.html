@@ -7,6 +7,32 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    
+    <div class="dashboard_container">
+        <!-- header !! -->
+        <div class="item header">
+            <div class="header_container">
+                <!-- user name -->
+                <div class="user_name">
+                    <h3>welcome KHEMBA</h3>
+                </div>
+                <!-- search -->
+                <div class="searchbar_container">
+                    <form id="search_dash" action="/search" method="GET">
+                        <input type="text" id="search_input" name="q" placeholder= "search...." >
+                    </form>
+                </div>
+                <!-- links -->
+                <div class="links">
+                    <form action="">
+                        <button class="link_btn" data_message = "uplaod recipe"><img src="svgs/cloud-upload-alt.svg" alt=""></button>
+                        <button class="link_btn" data_message = "notifications"><img src="svgs/bell.svg" alt=""></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="item sidebar">sidebar</div>
+        <div class="item main_content">main_content</div>
+    </div>
 </body>
+<script src="js.js"></script>
 </html>

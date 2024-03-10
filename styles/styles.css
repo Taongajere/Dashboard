@@ -1,0 +1,117 @@
+.dashboard_container {
+    display: grid;
+    grid-template-rows: 50px 1fr; /* Header row and content area */
+    grid-template-columns: 1fr 4fr; /* Sidebar and main content area */
+    grid-gap: 20px; /* Spacing between grid items */
+  }
+  
+  /* header */
+  .header {
+    grid-row: 1; /* Header spans the entire top row */
+    grid-column: 2; /* Header takes second column */
+  }
+  /* adds grid to the header */
+  .header_container {
+    display: grid;
+    grid-template-columns: 250px 1fr 150px;
+  }
+
+    logo
+    .logo {
+        width: 50px;
+    }
+        /* logo image */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    /* username */
+    .user_name {
+        font-family: Calibri;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+        /* profile picture */
+        .profile_picture {
+            width: 50px;
+        }
+            /* profile image */
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+    /* search bar */
+    .searchbar_container {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+        /* Styles for the input field */
+        .searchbar_container input[type=text] {
+            width: 450px;
+            padding: 10px;
+            border: 2px solid #111010;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+    /* links */
+    .links {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+        /* button styles */
+        .link_btn {
+            width: 25px;
+            /* remove btn property */
+            background: none;
+            border: none;
+            padding: 0;
+            margin-right: 10px;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+            /* shows after hovered over */
+            .link_btn::after {
+                content: attr(data_message); /* Text to display when hovered */
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 5px;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                opacity: 0; /* Initially hidden */
+                transition: opacity 0.3s ease;
+            }
+            .link_btn:hover::after {
+                opacity: 1; /* Show the content when hovered */
+            }
+            
+
+
+  .sidebar {
+    grid-row: 1/span 2; /* Sidebar starts on the second row */
+    grid-column: 1; /* Sidebar takes the first column */
+    background-color: antiquewhite;
+  }
+  
+  .main_content {
+    grid-row: 2; /* Main content starts on the second row */
+    grid-column: 2; /* Main content takes the second column */
+    background-color: blue;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .dashboard {
+      grid-template-rows: 100px 1fr; /* Header row and content area */
+      grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+  }
+  
