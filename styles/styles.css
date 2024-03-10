@@ -1,8 +1,9 @@
 .dashboard_container {
     display: grid;
     grid-template-rows: 50px 1fr; /* Header row and content area */
-    grid-template-columns: 1fr 4fr; /* Sidebar and main content area */
+    grid-template-columns: 0.8fr 4fr; /* Sidebar and main content area */
     grid-gap: 20px; /* Spacing between grid items */
+    font-family: calibri;
   }
   
   /* header */
@@ -95,12 +96,37 @@
             }
             
 
-
+/* side bar styles */
   .sidebar {
     grid-row: 1/span 2; /* Sidebar starts on the second row */
     grid-column: 1; /* Sidebar takes the first column */
     background-color: antiquewhite;
   }
+  .side_image {
+    width: 25px;
+    padding-right: 10px;
+  }
+    /* side bar grid */
+    .sidebar_container {
+        display: grid;
+        grid-template-rows: 40px 500px 1fr;
+        justify-content: center;
+    }
+    /* side bar contents */
+    .sidebar_section1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        /* flex */
+        .section1 {
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+
   
   .main_content {
     grid-row: 2; /* Main content starts on the second row */
