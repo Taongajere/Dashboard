@@ -31,6 +31,26 @@ body {
     flex-direction: column;
     padding: 20px;
   }
+    .quickBarContainer {
+      display: grid;
+      grid-template-rows: 0.5fr 0.5fr;
+      grid-gap: 100px;
+    }
+      .quick {
+        padding-top: 15px;
+        display: grid;
+        grid-template-columns: 25px 1fr;
+        grid-gap: 5px;
+        text-decoration: none; /* Removes default underline */
+        color: inherit; /* Inherits color from parent */
+        cursor: pointer; /* Change cursor on hover */
+        /* Optionally, you can add more styles to make it look like regular text */
+        font-weight: normal;
+        background-color: transparent;
+        border: none;
+      }
+
+
   /* main section */
   .main {
     grid-row: 2; /* Main content starts on the second row */
