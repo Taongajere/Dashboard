@@ -1,164 +1,79 @@
-.icon {
-    width: 15px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    fill: white;
-}
-.icon_link {
-    width: 40px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.dashboard_container {
-    display: grid;
-    grid-template-rows: 80px 1fr; /* Header row and content area */
-    grid-template-columns: 1.5fr 4fr; /* Sidebar and main content area */
-    font-family: calibri;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
   }
-  
-  /* header */
+  .dashboard {
+    display: grid;
+    grid-template-columns: 150px 1fr; /*makes two */
+    grid-template-rows:150px 1fr;
+  }
+
+  /* styles for header */
   .header {
     grid-row: 1; /* Header spans the entire top row */
     grid-column: 2; /* Header takes second column */
-  }
-  /* adds grid to the header */
-  .header_container {
-    display: grid;
-    grid-template-columns: 250px 1fr 150px;
+    background-color: #ff8c00;
+    color: white;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 20px;
   }
-    /* username */
-    /* search bar */
-    .searchbar_container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-        /* Styles for the input field */
-        .searchbar_container input[type=text] {
-            width: 450px;
-            padding: 10px;
-            border: 2px solid #111010;
-            border-radius: 20px;
-            font-size: 16px;
-        }
-    /* links */
-    .links {
-        display: flex;
-        justify-content: flex-end;
-        padding-top: 10px;
-    }
-        /* button styles */
-        
-        .link_btn {
-            width: 25px;
-            /* remove btn property */
-            background: none;
-            border: none;
-            padding: 0;
-            margin-right: 10px;
-            cursor: pointer;
-            display: inline-block;
-            position: relative;
-        }
-        
-            /* shows after hovered over */
-            .link_btn::after {
-                content: attr(data_message); /* Text to display when hovered */
-                position: absolute;
-                top: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-                padding: 5px;
-                background-color: #fff;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                opacity: 0; /* Initially hidden */
-                transition: opacity 0.3s ease;
-            }
-            .link_btn:hover::after {
-                opacity: 1; /* Show the content when hovered */
-            }
-            
 
-/* side bar styles */
-  .sidebar {
+  /* styles for quick bar */
+  .quickBar {
     grid-row: 1/span 2; /* Sidebar starts on the second row */
     grid-column: 1; /* Sidebar takes the first column */
-    background-color: blue;
+    background-color: #484848;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
   }
-
-    /* side bar grid */
-    .sidebar_container {
-        display: grid;
-        grid-template-rows: 40px 300px 300px;
-        color: white;
-    }
-    /* side bar contents */
-    /* section 1 */
-    .sidebar_section1 {
-        display: flex;
-        flex-direction: column;
-        padding-top: 65px;
-    }
-        /* flex */
-        .section1 {
-            padding-top: 10px;
-            display: grid;
-            grid-template-columns: 25px 1fr;
-            grid-gap: 2px;
-        }
-        /* section1 links */
-        .section1 {
-            text-decoration: none; /* Removes default underline */
-            color: inherit; /* Inherits color from parent */
-            cursor: pointer; /* Change cursor on hover */
-            /* Optionally, you can add more styles to make it look like regular text */
-            font-weight: normal;
-            background-color: transparent;
-            border: none;
-        }
-        /* text styles */
-        /* section2 */
-        .sidebar_section2 {
-            display: flex;
-            flex-direction: column;
-        }
-            /* flex */
-            .section2 {
-                padding-top: 10px;
-                display: grid;
-                grid-template-columns: 25px 1fr;
-                grid-gap: 2px;
-            }
-            /* section1 links */
-            .section2 {
-                text-decoration: none; /* Removes default underline */
-                color: inherit; /* Inherits color from parent */
-                cursor: pointer; /* Change cursor on hover */
-                /* Optionally, you can add more styles to make it look like regular text */
-                font-weight: normal;
-                background-color: transparent;
-                border: none;
-            }
-            /* text styles */
-        
-
-  
-  .main_content {
+  /* main section */
+  .main {
     grid-row: 2; /* Main content starts on the second row */
     grid-column: 2; /* Main content takes the second column */
-    background-color: blue;
+    
   }
-  
-  @media screen and (max-width: 768px) {
-    .dashboard {
-      grid-template-rows: 100px 1fr; /* Header row and content area */
-      grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    .mainContainer {
+      display: grid;
+      grid-template-columns: 1fr 400px;
     }
-  }
+      .recentRecipe {
+        display: grid;
+        grid-template-rows: 30px 1fr;
+        grid-gap: 40px;
+      }
+        .recentRecipes {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); /* 3 columns */
+          grid-gap: 20px; /* Gap between recipe boxes */
+        }
+          .recipe {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            background-color: #f0f0f0;
+          }
+            .recipeImage {
+              width: 80px;
+              height: 100%; /* Set your desired height */
+              background-size: cover;
+            }
   
+  .profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
