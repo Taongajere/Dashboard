@@ -9,15 +9,29 @@
 <body>
     <div class="dashboard">
         <div class="header">
-            <div>
-                <input type="text" placeholder="Search">
-                <img src="notifications-icon.png" alt="Notifications Icon" width="20">
-                <img src="upload-icon.png" alt="Upload Icon" width="20">
-            </div>
-            <div>
-                <img class="profile-picture" src="profile-picture-placeholder.jpg" alt="Profile Picture">
-                <span>Hi there, Khemba Kawaya</span>
-                <img src="dashboard-logo.png" alt="Dashboard Logo" width="40">
+            <div class="headerContainer">
+                <div class="header1">
+                    <div class="search">
+                        <form class="search_dash" action="/search" method="GET">
+                            <input type="text" id="search_input" name="q" placeholder= "search...." >
+                        </form> 
+                    </div>
+                    <div class="links">
+                        <form action="">
+                            <button class="link_btn" data_message = "uplaod recipe"><img class="icon_link" src="svgs/cloud-upload-alt.svg" width="40" alt=""></button>
+                            <button class="link_btn" data_message = "notifications"><img class="icon_link" src="svgs/bell.svg" width="40" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="header2">
+                    <div class="greating">
+                        <img class="profile-picture" src="svgs/profile.jpg" alt="Profile Picture">
+                        <span>Hi there, Khemba Kawaya</span>
+                    </div>
+                    <div class="logo">
+                        <img class="logoFrame" src="dashboard-logo.png" alt="Dashboard Logo" width= "100">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="quickBar">

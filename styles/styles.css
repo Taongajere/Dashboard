@@ -15,11 +15,91 @@ body {
     grid-column: 2; /* Header takes second column */
     background-color: #ff8c00;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
   }
+    .headercontainer {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 20px;
+    }
+      .header1 {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        align-items: center;
+      }
+        .search {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .search input[type=text] {
+          width: 450px;
+          padding: 10px;
+          border: 3px solid #484848;
+          border-radius: 20px;
+          font-size: 16px;
+          background-color: #f3f3f3;
+        }
+        .links {
+          display: flex;
+          justify-content: flex-end;
+        }
+          .link_btn {
+            /* remove btn property */
+            background: none;
+            border: none;
+            padding: 0;
+            margin-right: 10px;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+          }
+          /* shows after hovered over */
+          .link_btn::after {
+            content: attr(data_message); /* Text to display when hovered */
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease;
+          }
+          .link_btn:hover::after {
+              opacity: 1; /* Show the content when hovered */
+          }
+      .header2 {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        align-items: center;
+      }
+        .greating {
+          display: flex;
+          justify-content: flex-start;
+          margin-top: 20px;
+        }
+        .profile-picture {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        .logo {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 10px;
+        }
+        .logoFrame {
+          width: 70px;
+          height: 70px;
+        }
+
 
   /* styles for quick bar */
   .quickBar {
@@ -86,12 +166,7 @@ body {
               background-size: cover;
             }
   
-  .profile-picture {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
+
   .section {
     background-color: white;
     padding: 20px;
